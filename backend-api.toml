@@ -1,0 +1,26 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=42", "wheel"]
+
+[project]
+authors = [
+  {name = "Laurentiu Bica", email = "laurentiu.bica@dataandintuition.tech"},
+]
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "sqlalchemy",
+  "databases",
+  "psycopg2-binary", # PostgreSQL driver
+]
+description = "Backend API for Db Automation Discovery VS Code extension"
+name = "Db Automation Discovery Backend API"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.1.0"
+
+[tool.setuptools.packages.find]
+where = ["app"]
+
+[project.scripts]
+dbad-backend-api = "run_server:main"

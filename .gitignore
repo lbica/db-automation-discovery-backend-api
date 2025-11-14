@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+env/
+*.sqlite
+.vscodeignore
+app.log
+**/backend_api.egg-info
+
+# Node / VS Code extension
+node_modules/
+out/
+dist/
+.vscode/
+*.vsix
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+# Alembic unused migration files (optional)
+alembic/versions/*
+alembic/versions/*.py~
+
+alembic/*.mako
+
+# SQLLite database files
+*.db

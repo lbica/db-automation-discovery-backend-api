@@ -1,0 +1,31 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=42", "wheel"]
+
+[project]
+authors = [
+  {name = "Laurentiu Bica", email = "laurentiu.bica@dataandintuition.tech"},
+]
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic >=2.0",
+  "pydantic-settings",
+  "passlib[bcrypt]==1.7.4", # passlib with bcrypt extra in one line
+  "sqlalchemy >=2.0",
+  "PyYAML >=6.0", # ← add this because of your logging.yaml  
+  # "celery",                        # uncomment when you really need it
+  # "redis",                         # uncomment when you really need it
+  "psycopg2-binary", # PostgreSQL driver
+]
+description = "Backend API for Db Automation Discovery VS Code extension"
+name = "dbad-backend-api"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.1.0"
+
+[project.scripts]
+dbad-backend-api = "dbad_backend_api.run_server:main"
+
+[tool.setuptools]
+packages = ["dbad_backend_api"]

@@ -7,7 +7,12 @@ def main():
     parser.add_argument("--port", type=int, default=3001)
     args = parser.parse_args()
 
-    uvicorn.run("app.main:app", host=args.host, port=args.port, reload=True)
+    uvicorn.run(
+        "dbad_backend_api.api.main:app",
+        host=args.host,
+        port=args.port,
+        reload=False
+    )
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,9 @@
 from sqlalchemy.orm import Session
-from app.models.user import User
-from app.dtos.userdto import UserCreate, UserUpdate
+
 from passlib.hash import bcrypt
+
+from dbad_backend_api.api.dtos.user_dto import UserCreate, UserUpdate
+from dbad_backend_api.core.models.user import User
 
 class UserRepository:
     @staticmethod

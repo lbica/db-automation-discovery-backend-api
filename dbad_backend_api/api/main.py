@@ -1,15 +1,12 @@
 from typing import Union
-from app.core.logging import setup_logging
 from fastapi import FastAPI
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, Session
-from sqlalchemy.ext.declarative import declarative_base
-from app.core.middleware import exception_logging_middleware
 
-from app.core.config import settings
 
-from app.core.database import Base, engine
-from app.api.routes_user import router as user_router
+from dbad_backend_api.api.middleware import  exception_logging_middleware
+from dbad_backend_api.api.routes.router import api_router
+from dbad_backend_api.core.database import Base, engine
+from dbad_backend_api.core.utils.logging import setup_logging
 
 # Logging setup
 setup_logging()  
@@ -21,9 +18,8 @@ app = FastAPI(title="DB Automation Discovery Background API", version="1.0")
 Base.metadata.create_all(bind=engine)
 
 # Routers
-app.include_router(user_router)
+app.include_router(api_router, prefix="/api")
 
 # Middleware for logging exceptions
-
 app.middleware("http")(exception_logging_middleware)
 

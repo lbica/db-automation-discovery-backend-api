@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
-from app.repositories.user_repository import UserRepository
-from app.dtos.userdto import UserCreate, UserUpdate
+
+from dbad_backend_api.core.repositories.user_repository import UserRepository
+from dbad_backend_api.api.dtos.user_dto import UserCreate, UserUpdate
 
 class UserService:
     @staticmethod

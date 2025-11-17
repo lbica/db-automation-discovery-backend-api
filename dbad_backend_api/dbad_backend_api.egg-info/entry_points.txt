@@ -1,0 +1,2 @@
+[console_scripts]
+dbad-backend-api = dbad_backend_api.run_server:main

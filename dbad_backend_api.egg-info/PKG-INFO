@@ -13,3 +13,4 @@ Requires-Dist: passlib[bcrypt]==1.7.4
 Requires-Dist: sqlalchemy>=2.0
 Requires-Dist: PyYAML>=6.0
 Requires-Dist: psycopg2-binary
+Requires-Dist: python-dotenv

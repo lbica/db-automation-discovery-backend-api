@@ -17,6 +17,7 @@ dependencies = [
   # "celery",                        # uncomment when you really need it
   # "redis",                         # uncomment when you really need it
   "psycopg2-binary", # PostgreSQL driver
+  "python-dotenv"
 ]
 description = "Backend API for Db Automation Discovery VS Code extension"
 name = "dbad-backend-api"
@@ -24,8 +25,9 @@ readme = "README.md"
 requires-python = ">=3.10"
 version = "0.1.0"
 
-[project.scripts]
-dbad-backend-api = "dbad_backend_api.run_server:main"
-
 [tool.setuptools]
 packages = ["dbad_backend_api"]
+
+
+[project.scripts]
+dbad-backend-api = "dbad_backend_api.run_server:main"

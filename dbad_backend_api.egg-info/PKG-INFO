@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: dbad-backend-api
-Version: 0.1.0
+Version: 0.1.1
 Summary: Backend API for Db Automation Discovery VS Code extension
 Author-email: Laurentiu Bica <laurentiu.bica@dataandintuition.tech>
 Requires-Python: >=3.10

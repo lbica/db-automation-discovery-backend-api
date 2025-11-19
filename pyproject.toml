@@ -28,6 +28,8 @@ version = "0.1.0"
 [tool.setuptools]
 packages = ["dbad_backend_api"]
 
+[tool.setuptools.packages.find]
+include = ["dbad_backend_api*"]
 
 [project.scripts]
 dbad-backend-api = "dbad_backend_api.run_server:main"
